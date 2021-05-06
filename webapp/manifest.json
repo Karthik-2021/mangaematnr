@@ -110,6 +110,10 @@
 				"View2": {
 					"viewType": "XML",
 					"viewName": "View2"
+				},
+				"View3": {
+					"viewType": "XML",
+					"viewName": "View3"
 				}
 			},
 			"routes": [
