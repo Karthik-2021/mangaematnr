@@ -106,6 +106,10 @@
 					"viewId": "ManageMaterialRequest",
 					"viewLevel": 1,
 					"transition": "slide"
+				},
+				"View2": {
+					"viewType": "XML",
+					"viewName": "View2"
 				}
 			},
 			"routes": [
