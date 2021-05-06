@@ -1,0 +1,357 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" controllerName="com.sap.build.standard.nspiManageMaterialRequest.controller.ManageMaterialRequest" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:core="sap.ui.core">
+    <Page showHeader="true" title="Manage Material Request" showFooter="true">
+        <content>
+            <IconTabBar expandable="true" expanded="true" applyContentPadding="false" backgroundDesign="Solid" upperCase="false" visible="true" selectedKey="Ok">
+                <items>
+                    <IconTabFilter icon="sap-icon://edit" iconColor="Positive" text="User Data &amp; Identification" count="" design="Horizontal" enabled="true" showAll="false" textDirection="LTR" visible="true" tooltip="User Data &amp; Identification">
+                        <content>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title>
+                                    <core:Title text="Request" level="H2" icon="sap-icon://user-edit"/>
+                                </form:title>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Request Number" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Standard" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                    <Button text="Search" type="Default" icon="sap-icon://search" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Material" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                    <Button text="Search" type="Default" icon="sap-icon://search" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress1"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Requestor Actor" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Originator" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Originator 1" enabled="true" key="Originator 1"/>
+                                                            <core:Item text="Originator 2" enabled="true" key="Originator 2"/>
+                                                            <core:Item text="Originator 3" enabled="true" key="Originator 3"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Engineering Validator" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="EV 1" enabled="true" key="EV 1"/>
+                                                            <core:Item text="EV 2" enabled="true" key="EV 2"/>
+                                                            <core:Item text="EV 3" enabled="true" key="EV 3"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="A/C Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="A/C Type 1" enabled="true" key="A/C Type 1"/>
+                                                            <core:Item text="A/C Type 2" enabled="true" key="A/C Type 2"/>
+                                                            <core:Item text="A/C Type 3" enabled="true" key="A/C Type 3"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Procurement Responsible" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="PR 1" enabled="true" key="PR 1"/>
+                                                            <core:Item text="PR 2" enabled="true" key="PR 2"/>
+                                                            <core:Item text="PR 3" enabled="true" key="PR 3"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Request Type" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Request Type 1" enabled="true" key="Request Type 1"/>
+                                                            <core:Item text="Request Type 2" enabled="true" key="Request Type 2"/>
+                                                            <core:Item text="Request Type 3" enabled="true" key="Request Type 3"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Usage Group" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea value="00 - Empty" rows="10" cols="20" maxLength="10" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Request Creation Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119642596-fields-sap_m_DateRangeSelection-1603119682764" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119642596-fields-sap_m_DateRangeSelection-1603119682764/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119642596-fields-sap_m_DateRangeSelection-1603119682764/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Release requisition Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119848396-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119848396-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119848396-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange1"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Need Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119849829-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119849829-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603112239883-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603119849829-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange2"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Consuming NACTO" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Consuming Plant" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <ComboBox editable="true" enabled="true" visible="true" width="400px" valueState="None" maxWidth="100%">
+                                                        <items>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                            <core:Item text="Item" enabled="true" key="Item"/>
+                                                        </items>
+                                                    </ComboBox>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Include Cancelled Request" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false" useEntireWidth="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Not qualified Request" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <CheckBox text="" selected="true" editable="true" enabled="true" visible="true" width="auto" textDirection="Inherit" wrapping="false" useEntireWidth="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                            <form:Form width="100%" editable="true" visible="true">
+                                <form:title>
+                                    <core:Title text="Activities" level="H2" icon="sap-icon://user-edit"/>
+                                </form:title>
+                                <form:formContainers>
+                                    <form:FormContainer visible="true">
+                                        <form:formElements>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Status E" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea value="Validated with restiction Manuf" rows="5" cols="20" maxLength="100" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Status P" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea value="Initial" rows="5" cols="20" maxLength="10" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Status T" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea value="In progress" rows="5" cols="20" maxLength="10" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Status O" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <TextArea value="Analyse in Progress" rows="5" cols="20" maxLength="100" wrapping="None" enabled="true" required="false" valueStateText="Invalid entry" visible="true"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Update Status Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120531946-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120531946-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120531946-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange3"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Last Updator" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Validated Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120572916-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120572916-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120572916-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange4"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Engineering Actor" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Engineering Change Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120573959-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120573959-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120573959-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange5"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Procurement Actor" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Procurement Change Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120575105-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120575105-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120575105-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange6"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Ordering Actor" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Input value="" type="Text" showValueHelp="false" enabled="true" visible="true" width="400px" valueHelpOnly="false" required="false" valueStateText="Invalid entry" maxLength="0"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="Ordering Change Date" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <DateRangeSelection id="np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120576851-fields-sap_m_DateRangeSelection-1" dateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120576851-fields-sap_m_DateRangeSelection-1/dateValue}" secondDateValue="{staticDataModel>/np-sap_m_IconTabFilter_Ok-1442508845077-0B8-de6a1f4967aecd8f0e3330483_S3-content-build_simple_form_Form-1603115730395-formContainers-build_simple_form_FormContainer-1-formElements-build_simple_form_FormElement-1603120576851-fields-sap_m_DateRangeSelection-1/secondDateValue}" width="400px" displayFormat="long" required="false" valueStateText="Invalid entry" enabled="true" visible="true" change="_onDateRangeSelectionChange7"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                            <form:FormElement visible="true">
+                                                <form:label>
+                                                    <Label text="" design="Standard" width="100%" required="false" textAlign="Begin" textDirection="Inherit" visible="true"/>
+                                                </form:label>
+                                                <form:fields>
+                                                    <Button text="Get List" type="Default" icon="sap-icon://list" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false"/>
+                                                    <Button text="Clear" type="Default" icon="sap-icon://eraser" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false"/>
+                                                    <Button text="Help" type="Default" icon="sap-icon://sys-help" iconFirst="true" width="100px" enabled="true" visible="true" iconDensityAware="false"/>
+                                                </form:fields>
+                                            </form:FormElement>
+                                        </form:formElements>
+                                        <form:title/>
+                                    </form:FormContainer>
+                                </form:formContainers>
+                                <form:layout>
+                                    <form:ResponsiveGridLayout adjustLabelSpan="false" columnsL="2" labelSpanL="3" columnsM="1" labelSpanM="2" labelSpanS="12"/>
+                                </form:layout>
+                            </form:Form>
+                        </content>
+                    </IconTabFilter>
+                    <IconTabSeparator icon="sap-icon://navigation-right-arrow" iconDensityAware="false"/>
+                    <IconTabFilter icon="sap-icon://complete" iconColor="Positive" text="Summary &amp; Validation" count="" design="Horizontal" showAll="false" textDirection="LTR" enabled="true" visible="true" tooltip="mmary &amp; Validation" iconDensityAware="false">
+                        <content>
+                            <MessageStrip text="Summary Message" type="Success" customIcon="sap-icon://message-success" showIcon="false" showCloseButton="false" visible="true">
+                                <link/>
+                            </MessageStrip>
+                            <MessageStrip text="Validations" type="Warning" customIcon="sap-icon://warning" showIcon="false" showCloseButton="false" visible="true">
+                                <link/>
+                            </MessageStrip>
+                            <MessageStrip text="Error" type="Error" customIcon="sap-icon://status-error" showIcon="false" showCloseButton="false" visible="true">
+                                <link/>
+                            </MessageStrip>
+                        </content>
+                    </IconTabFilter>
+                </items>
+                <content/>
+            </IconTabBar>
+        </content>
+        <footer/>
+        <headerContent/>
+        <subHeader/>
+        <customHeader/>
+    </Page>
+</mvc:View>

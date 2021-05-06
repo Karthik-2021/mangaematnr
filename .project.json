@@ -1,0 +1,7 @@
+{
+    "dataBinding": {
+        "/webapp/view/ManageMaterialRequest.view.xml": {
+            "entitySet": ""
+        } 
+    }
+}
